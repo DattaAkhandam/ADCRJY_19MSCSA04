@@ -1,0 +1,13 @@
+Algorithm:
+Use three nested loops.
+Outer loops will decide the starting point of a sub-array, call it as startPoint.
+First inner loops will decide the group size (sub-array size). Group size starting from 1 and goes up array size. Let’s call is as abc.
+The most inner loop will actually print the sub-array by iterating the given array from startPoint and print the next abc elements.
+
+Output:
+1
+1 2
+1 2 3
+2
+2 3
+3
