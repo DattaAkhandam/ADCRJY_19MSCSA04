@@ -1,0 +1,35 @@
+class Solution {
+    public int minSubArrayLen(int x, int[] arr) {
+int n=arr.length;
+int ans=Integer.MAX_VALUE;
+int i=0;
+int sum=0;
+int start=0;
+while(i<n){
+sum=sum+arr[i];
+if(sum>=x){
+int temp=(i-start)+1;
+if(temp<ans){
+ans=temp;
+}
+sum=sum-arr[start];
+sum=sum-arr[i];
+start++;
+}
+else{
+i++;
+}
+}
+if(ans==Integer.MAX_VALUE){
+ans=0;
+}
+return ans;
+}
+}
+    
+Accepted
+Runtime: 0 ms
+Your input     7
+               [2,3,1,2,4,3]
+Output    2
+Expected  2
