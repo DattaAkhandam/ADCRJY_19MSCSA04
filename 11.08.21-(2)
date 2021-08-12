@@ -1,0 +1,39 @@
+import java.util.*;
+public class Solution
+{
+  public static void main(String []args) 
+  {
+    int n,i,j,temp;
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter how many numbers:");
+    n=sc.nextInt();
+    int arr[]=new int[n];
+    System.out.println("Enter " +n+ " numbers into array: ");
+    for(i=0;i<n;i++) 
+      arr[i]=sc.nextInt();
+    for(i=0;i<(n-1);i++) 
+    {
+      for(j=0;j<n-i-1;j++)
+      {
+        if(arr[j]<arr[j+1]) 
+        {
+          temp=arr[j];
+          arr[j]=arr[j+1];
+          arr[j+1]=temp;
+        }
+      }
+    }
+    System.out.println("Sorted list of mumbers:");
+     for(i=0;i<n;i++) 
+      System.out.print(arr[i]);
+  } 
+}
+
+Output:
+Enter how many numbers:
+8
+Enter 8 numbers into  array:
+4 18 1 16 2 16 21 13 
+Sorted array:
+21 18 16 16 13 4 2 1
+ 
