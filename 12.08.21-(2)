@@ -1,0 +1,59 @@
+import java.util.*;
+public class Solution
+{
+    static int recLen(String str)
+    {
+        if(str.equals(""))
+            return 0;
+        else
+            return recLen(str.substring(1))+1;
+    }
+    public static void main(String[] args)
+    {   
+        String str ="AdityaDegreeCollege";
+        System.out.println(recLen(str));
+    }
+}
+Output:
+19
+
+
+class Solution
+{
+    static final int N = 20;
+    static int n = 1;
+    static void fun1()
+    {
+        if (n <= N)
+        {
+            System.out.printf("%d ", n);
+            n++;
+            fun2();
+        }
+        else
+        {
+            return;
+        }
+    }
+    static void fun2()
+    {
+        if (n <= N)
+        {
+            System.out.printf("%d",n);
+            n++;
+            fun1();
+        }
+        else
+        {
+            return;
+        }
+    }
+    public static void main(String[] args)
+    {
+        fun1();
+    }
+}
+
+Output:
+
+1 2  3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
