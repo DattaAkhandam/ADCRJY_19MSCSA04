@@ -9,7 +9,6 @@ public class Solution
     }
     public static void main(String args[])
     {
-        Scanner sc=new Scanner(System.in);
         int n=123;
         int result=sumofdigit(n);
         System.out.println("Sum of digits = "+ result);
