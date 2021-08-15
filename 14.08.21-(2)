@@ -1,0 +1,43 @@
+import java.util.*;
+import java.lang.*;
+public class Solution
+{
+    public static void countCurrency(int amount)
+    {
+        int sum=0;
+        int[] notes=new int[]{ 2000, 500, 200, 100, 50, 20, 10, 5, 1 };
+        int[] arr=new int[9];
+        for(int i=0;i<9;i++)
+        {
+            if(amount>=notes[i]) 
+            {
+                arr[i]=amount/notes[i];
+                amount=amount-arr[i]*notes[i];
+            }
+        }
+        System.out.println("Currency Count - ");
+        for(int i=0;i<9;i++) 
+        {
+            if(arr[i]!=0) 
+            {
+                System.out.println(notes[i]+" : "+ arr[i]);
+                sum++;
+            }
+        }
+        System.out.println("Minimum no. of notes :"+sum);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int amount=sc.nextInt();
+        countCurrency(amount);
+    }
+}
+
+Output:
+800
+Currency count -
+500 : 1
+200 : 1
+100 : 1
+Minimum no.of notes : 3
