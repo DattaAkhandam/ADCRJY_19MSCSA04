@@ -1,0 +1,34 @@
+import java.util.*;
+class Solution
+ {
+    public static double calculateBill(double units)
+    {
+        double bill=0;
+        if(units<=100)
+             bill=units*3.25;
+        else if(units<=200)
+             bill=100*3.25+(units-100)*5.63;
+        else if(units<=300)
+             bill=100*3.25+100*5.63+(units-200)*6.88;
+        else if(units<=400)
+             bill=100*3.25+100*5.63+100*6.88+(units-300)*7.38;
+        else if(units<=500)
+             bill=100*3.25+100*5.63+100*6.88+100*7.38+(units-400)*7.88;
+        else if(units>500)
+             bill=100*3.25+100*5.63+100*6.88+100*7.38+100*7.88+(units-500)*8.38;
+       return bill;
+   }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        double units=sc.nextDouble();
+        double a=calculateBill(units);
+        System.out.println(a);
+        
+    }
+}
+
+Output:
+250
+1232.0
+
